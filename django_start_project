@@ -66,3 +66,17 @@ MIDDLEWARE = [
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
+
+
+запуск gunicorn:   // не оч полезно 
+. ./bin/start_gunicorn.sh    из  /home/apulazo/PycharmProjects/learnToTrade/learnToTrade/
+
+nginx:
+service nginx restart
+cd /etc/nginx/sites-available/
+cd /var/log/nginx/
+
+supervisor:
+sudo service supervisor stop
+sudo service supervisor start
+sudo view /var/log/supervisor/
